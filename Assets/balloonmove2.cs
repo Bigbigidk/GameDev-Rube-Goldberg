@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class balloonmove2 : MonoBehaviour
 {
-    int balloontrigger = GameObject.Find("balloon platform2").GetComponent<balloonbutton2>().balloon2;
+    int balloontrigger;
     public float speed;
 
     // Start is called before the first frame update
@@ -14,7 +14,7 @@ public class balloonmove2 : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
         balloontrigger = GameObject.Find("balloon platform2").GetComponent<balloonbutton2>().balloon2;
