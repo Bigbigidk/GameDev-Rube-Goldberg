@@ -2,30 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class balloonbutton : MonoBehaviour
+public class cart : MonoBehaviour
 {
-   public GameObject OtherObject;
-   public int balloon;
+
+    public float speed;
     // Start is called before the first frame update
     void Start()
     {
 
-        balloon = 0;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        Vector3 currentPos = transform.position;
+        transform.position = currentPos;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Vector3 currentPos = transform.position;
+
         if (collision.gameObject.transform.name == "Penguin ball")
         {
-           balloon = 1;
-
+            currentPos.x += speed;
         }
+
+        transform.position = currentPos;
+
     }
 }

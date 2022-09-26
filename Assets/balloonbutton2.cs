@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class balloonbutton : MonoBehaviour
+public class balloonbutton2 : MonoBehaviour
 {
-   public GameObject OtherObject;
-   public int balloon;
+    public GameObject OtherObject;
+    public int balloon2;
     // Start is called before the first frame update
     void Start()
     {
 
-        balloon = 0;
+        balloon2 = 0;
 
     }
 
@@ -24,7 +24,7 @@ public class balloonbutton : MonoBehaviour
     {
         if (collision.gameObject.transform.name == "Penguin ball")
         {
-           balloon = 1;
+            balloon2 = 1;
 
         }
     }
